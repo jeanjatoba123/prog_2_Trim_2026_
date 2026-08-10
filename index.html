@@ -6,173 +6,187 @@
   <title>GAME SABER</title>
   <style>
     body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      padding: 30px 15px;
-      text-align: center;
       font-family: Arial, sans-serif;
-      background-color: #e2e8f0; /* Fundo cinza moderno */
-      font-size: 19px; /* Aumentou o tamanho padrão das letras */
+      background-color: #e2e8f0; /* Fundo cinza suave */
       color: #1e293b;
+      margin: 0;
+      padding: 20px 15px 40px 15px;
+      text-align: center;
+      font-size: 20px;
     }
 
-    /* Aumentando e destacando os textos do topo */
-    h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
+    /* DESTAQUE ESPECIAL PARA O GAME DO SABER */
+    .topo-banner {
+      background: linear-gradient(135deg, #1e3c72, #2a5298); /* Fundo azul moderno */
+      color: #ffffff;
+      padding: 25px 15px;
+      border-radius: 15px;
+      max-width: 800px;
+      margin: 0 auto 30px auto;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    .topo-banner h1 {
+      font-size: 48px;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #ffd700; /* Dourado em destaque */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .topo-banner .subtitulo-topo {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 8px;
+      color: #ffffff;
+      letter-spacing: 1px;
+    }
+
+    /* TEXTOS DE APRESENTAÇÃO */
+    .apresentacao {
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     h2 {
       font-size: 28px;
-      margin-top: 25px;
+      color: #1e293b;
     }
 
     p {
-      font-size: 20px; /* Letras dos parágrafos maiores */
+      font-size: 22px;
       line-height: 1.5;
-      margin: 8px 0;
     }
 
     img {
       max-width: 90%;
       height: auto;
       border-radius: 12px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
     figure {
-      margin: 25px 0;
+      margin: 30px 0;
     }
 
-    /* ESTILO CARTAZ DE TRANSFORMAÇÃO */
-    .cartaz-transformacao {
+    /* CARTAZ DO ANTES E DEPOIS */
+    .cartaz {
       background-color: #ffffff;
-      border: 3px solid #2b5b84;
+      border: 3px solid #2a5298;
       border-radius: 15px;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
       max-width: 800px;
-      width: 100%;
       margin: 30px auto;
-      padding: 30px;
+      padding: 25px;
       box-sizing: border-box;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     }
 
-    .cartaz-titulo {
-      font-size: 30px;
-      color: #2b5b84;
-      margin-top: 0;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .painel-comparativo {
+    .painel {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin: 25px 0;
+      gap: 15px;
+      margin: 20px 0;
     }
 
-    .caixa-antes, .caixa-depois {
+    .antes, .depois {
       flex: 1;
-      min-width: 260px;
-      padding: 20px;
+      min-width: 250px;
+      padding: 15px;
       border-radius: 10px;
       text-align: left;
     }
 
-    .caixa-antes {
+    .antes {
       background-color: #ffebee;
-      border-left: 6px solid #d32f2f;
+      border-left: 5px solid #d32f2f;
     }
 
-    .caixa-depois {
+    .depois {
       background-color: #e8f5e9;
-      border-left: 6px solid #388e3c;
+      border-left: 5px solid #388e3c;
     }
 
-    .caixa-antes h3 {
+    .antes h3 {
       color: #c62828;
+      font-size: 24px;
       margin-top: 0;
-      font-size: 22px;
     }
 
-    .caixa-depois h3 {
+    .depois h3 {
       color: #2e7d32;
+      font-size: 24px;
       margin-top: 0;
-      font-size: 22px;
     }
 
-    .lista-impacto {
+    ul {
       padding-left: 20px;
-      font-size: 18px; /* Letras da lista maiores */
+      font-size: 19px;
       line-height: 1.6;
     }
 
-    .frase-destaque {
-      font-size: 22px; /* Destaque maior */
+    .frase {
+      font-size: 22px;
       font-weight: bold;
       color: #1a237e;
       background: #e8eaf6;
-      padding: 16px;
+      padding: 15px;
       border-radius: 8px;
-      margin-top: 25px;
+      margin-top: 20px;
     }
 
-    .autor-cartaz {
-      font-size: 17px;
+    .autor {
+      font-size: 18px;
       color: #555555;
-      margin-top: 12px;
       font-style: italic;
     }
   </style>
 </head>
 <body>
 
-  <h1><b><u>Game do Saber</u></b></h1>
-  <p><b>NOSSA ESCOLA, NOSSA VOZ!</b></p>
-  <p>O que devemos fazer para nossa escola Melhorar?</p>
-  <h2>Transformando nossa escola, construindo nosso futuro!</h2>
-  <p>Veja como pequenas mudanças fazem uma grande diferença na nossa educação.</p>
+  <header class="topo-banner">
+    <h1>Game do Saber</h1>
+    <div class="subtitulo-topo">NOSSA ESCOLA, NOSSA VOZ!</div>
+  </header>
+
+  <main class="apresentacao">
+    <p><b>O que devemos fazer para nossa escola Melhorar?</b></p>
+    <h2>Transformando nossa escola, construindo nosso futuro!</h2>
+    <p>Veja como pequenas mudanças fazem uma grande diferença na nossa educação.</p>
+  </main>
 
   <figure>
-    <img src="reformas 2.jpg" alt="Tirinha da Reforma">
+    <img src="reformas 2.jpg" alt="Tirinha do Projeto">
   </figure>
 
-  <section class="cartaz-transformacao">
-    <h2 class="cartaz-titulo">📢 A Voz dos Alunos: O Impacto Real</h2>
+  <section class="cartaz">
+    <h2 style="color: #2a5298; margin-top: 0;">📢 A VOZ DOS ALUNOS</h2>
     
-    <div class="painel-comparativo">
-      
-      <div class="caixa-antes">
-        <h3>❌ COMO ERA (ANTES)</h3>
-        <ul class="lista-impacto">
+    <div class="painel">
+      <div class="antes">
+        <h3>❌ ANTES</h3>
+        <ul>
           <li>Falta de estrutura no laboratório</li>
           <li>Equipamentos quebrados</li>
-          <li>Desmotivação total nos estudos</li>
+          <li>Desmotivação nos estudos</li>
         </ul>
       </div>
 
-      <div class="caixa-depois">
-        <h3>✅ COMO FICOU (DEPOIS)</h3>
-        <ul class="lista-impacto">
-          <li>Fones novos e computadores rápidos</li>
-          <li>Aulas mais práticas e focadas</li>
-          <li>Ambiente moderno e motivador</li>
+      <div class="depois">
+        <h3>✅ DEPOIS</h3>
+        <ul>
+          <li>Fones e computadores novos</li>
+          <li>Aulas práticas e focadas</li>
+          <li>Ambiente motivador</li>
         </ul>
       </div>
-
     </div>
 
-    <div class="frase-destaque">
+    <div class="frase">
       "Agora dá vontade de estudar! A escola virou um lugar de aprendizado de verdade."
     </div>
     
-    <p class="autor-cartaz">— Depoimento de Lucas Silva, Aluno do 2º Ano</p>
+    <p class="autor">— Lucas Silva, Aluno do 2º Ano</p>
   </section>
 
 </body>
