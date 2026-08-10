@@ -12,37 +12,57 @@
       align-items: center;
       min-height: 100vh;
       margin: 0;
-      padding: 20px 0;
+      padding: 30px 15px;
       text-align: center;
       font-family: Arial, sans-serif;
-      background-color: #f4f6f9;
+      background-color: #e2e8f0; /* Fundo cinza moderno */
+      font-size: 19px; /* Aumentou o tamanho padrão das letras */
+      color: #1e293b;
+    }
+
+    /* Aumentando e destacando os textos do topo */
+    h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-top: 25px;
+    }
+
+    p {
+      font-size: 20px; /* Letras dos parágrafos maiores */
+      line-height: 1.5;
+      margin: 8px 0;
     }
 
     img {
       max-width: 90%;
       height: auto;
-      border-radius: 8px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
 
     figure {
-      margin: 20px 0;
+      margin: 25px 0;
     }
 
-    /* ESTILO ESTILO CARTAZ DE TRANSFORMAÇÃO */
+    /* ESTILO CARTAZ DE TRANSFORMAÇÃO */
     .cartaz-transformacao {
       background-color: #ffffff;
       border: 3px solid #2b5b84;
       border-radius: 15px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-      max-width: 750px;
-      width: 90%;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+      max-width: 800px;
+      width: 100%;
       margin: 30px auto;
-      padding: 25px;
+      padding: 30px;
       box-sizing: border-box;
     }
 
     .cartaz-titulo {
-      font-size: 26px;
+      font-size: 30px;
       color: #2b5b84;
       margin-top: 0;
       text-transform: uppercase;
@@ -52,61 +72,61 @@
     .painel-comparativo {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 20px;
       justify-content: center;
-      margin: 20px 0;
+      margin: 25px 0;
     }
 
     .caixa-antes, .caixa-depois {
       flex: 1;
-      min-width: 250px;
-      padding: 15px;
+      min-width: 260px;
+      padding: 20px;
       border-radius: 10px;
       text-align: left;
     }
 
     .caixa-antes {
       background-color: #ffebee;
-      border-left: 5px solid #d32f2f;
+      border-left: 6px solid #d32f2f;
     }
 
     .caixa-depois {
       background-color: #e8f5e9;
-      border-left: 5px solid #388e3c;
+      border-left: 6px solid #388e3c;
     }
 
     .caixa-antes h3 {
       color: #c62828;
       margin-top: 0;
-      font-size: 20px;
+      font-size: 22px;
     }
 
     .caixa-depois h3 {
       color: #2e7d32;
       margin-top: 0;
-      font-size: 20px;
+      font-size: 22px;
     }
 
     .lista-impacto {
       padding-left: 20px;
-      font-size: 16px;
-      line-height: 1.5;
+      font-size: 18px; /* Letras da lista maiores */
+      line-height: 1.6;
     }
 
     .frase-destaque {
-      font-size: 20px;
+      font-size: 22px; /* Destaque maior */
       font-weight: bold;
       color: #1a237e;
       background: #e8eaf6;
-      padding: 12px;
+      padding: 16px;
       border-radius: 8px;
-      margin-top: 20px;
+      margin-top: 25px;
     }
 
     .autor-cartaz {
-      font-size: 15px;
+      font-size: 17px;
       color: #555555;
-      margin-top: 8px;
+      margin-top: 12px;
       font-style: italic;
     }
   </style>
@@ -114,13 +134,13 @@
 <body>
 
   <h1><b><u>Game do Saber</u></b></h1>
-  <p>NOSSA ESCOLA, NOSSA VOZ!</p>
+  <p><b>NOSSA ESCOLA, NOSSA VOZ!</b></p>
   <p>O que devemos fazer para nossa escola Melhorar?</p>
   <h2>Transformando nossa escola, construindo nosso futuro!</h2>
   <p>Veja como pequenas mudanças fazem uma grande diferença na nossa educação.</p>
 
   <figure>
-    <img src="reformas 2.jpg">
+    <img src="reformas 2.jpg" alt="Tirinha da Reforma">
   </figure>
 
   <section class="cartaz-transformacao">
