@@ -5,155 +5,190 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GAME SABER</title>
   <style>
+    /* Estilo inspirado no layout do Canva (Blocos de cores e design limpo) */
     body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f3f4f6;
+      color: #111111;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      margin: 0;
-      padding: 20px 0;
-      text-align: center;
-      font-family: Arial, sans-serif;
-      background-color: #f4f6f9;
-    }
-
-    img {
-      max-width: 90%;
-      height: auto;
-      border-radius: 8px;
-    }
-
-    figure {
-      margin: 20px 0;
-    }
-
-    /* ESTILO ESTILO CARTAZ DE TRANSFORMAÇÃO */
-    .cartaz-transformacao {
-      background-color: #ffffff;
-      border: 3px solid #2b5b84;
-      border-radius: 15px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-      max-width: 750px;
-      width: 90%;
-      margin: 30px auto;
-      padding: 25px;
       box-sizing: border-box;
     }
 
-    .cartaz-titulo {
-      font-size: 26px;
-      color: #2b5b84;
-      margin-top: 0;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    .cartao-container {
+      background-color: #ffffff;
+      max-width: 900px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
 
-    .painel-comparativo {
+    /* Bloco do Topo (Título e Subtítulo) */
+    .cabecalho {
+      padding: 40px;
+      text-align: center;
+      background-color: #ffffff;
+      border-bottom: 2px solid #f0f0f0;
+    }
+
+    .cabecalho h1 {
+      font-size: 36px;
+      margin: 0 0 10px 0;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .cabecalho .tagline {
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #666666;
+      margin-bottom: 15px;
+    }
+
+    .cabecalho p {
+      font-size: 18px;
+      color: #444444;
+      margin: 0;
+    }
+
+    /* Conteúdo em Duas Colunas (Como no modelo) */
+    .conteudo-principal {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-      margin: 20px 0;
+      background-color: #eaf4f1; /* Cor mint/verde pastel suave */
+      padding: 40px;
+      gap: 30px;
     }
 
-    .caixa-antes, .caixa-depois {
+    .coluna-imagem {
       flex: 1;
-      min-width: 250px;
-      padding: 15px;
-      border-radius: 10px;
-      text-align: left;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .caixa-antes {
-      background-color: #ffebee;
-      border-left: 5px solid #d32f2f;
+    .coluna-imagem img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    .caixa-depois {
-      background-color: #e8f5e9;
-      border-left: 5px solid #388e3c;
+    .coluna-texto {
+      flex: 1.2;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
 
-    .caixa-antes h3 {
-      color: #c62828;
+    .coluna-texto h2 {
+      font-size: 24px;
       margin-top: 0;
-      font-size: 20px;
+      color: #111111;
     }
 
-    .caixa-depois h3 {
-      color: #2e7d32;
-      margin-top: 0;
-      font-size: 20px;
+    .coluna-texto .subtitulo-secao {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #888888;
+      font-weight: bold;
+      margin-bottom: 5px;
     }
 
-    .lista-impacto {
-      padding-left: 20px;
-      font-size: 16px;
+    .coluna-texto p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #444444;
+      margin-bottom: 20px;
+    }
+
+    /* Bloco Inferior Pastel (Efeito Canva) */
+    .rodape-depoimento {
+      background-color: #fcd5ce; /* Cor salmão/peach pastel suave */
+      padding: 30px 40px;
+      text-align: center;
+    }
+
+    .rodape-depoimento blockquote {
+      margin: 0;
+      font-size: 18px;
+      font-style: italic;
+      color: #222222;
       line-height: 1.5;
     }
 
-    .frase-destaque {
-      font-size: 20px;
+    .rodape-depoimento .autor {
+      margin-top: 10px;
+      font-size: 14px;
       font-weight: bold;
-      color: #1a237e;
-      background: #e8eaf6;
-      padding: 12px;
-      border-radius: 8px;
-      margin-top: 20px;
+      font-style: normal;
+      color: #555555;
     }
 
-    .autor-cartaz {
-      font-size: 15px;
-      color: #555555;
-      margin-top: 8px;
-      font-style: italic;
+    /* Responsivo para celular */
+    @media (max-width: 768px) {
+      .conteudo-principal {
+        padding: 20px;
+      }
+      .cabecalho {
+        padding: 25px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1><b><u>Game do Saber</u></b></h1>
-  <p>NOSSA ESCOLA, NOSSA VOZ!</p>
-  <p>O que devemos fazer para nossa escola Melhorar?</p>
-  <h2>Transformando nossa escola, construindo nosso futuro!</h2>
-  <p>Veja como pequenas mudanças fazem uma grande diferença na nossa educação.</p>
-
-  <figure>
-    <img src="reformas 2.jpg">
-  </figure>
-
-  <section class="cartaz-transformacao">
-    <h2 class="cartaz-titulo">📢 A Voz dos Alunos: O Impacto Real</h2>
+  <div class="cartao-container">
     
-    <div class="painel-comparativo">
+    <header class="cabecalho">
+      <div class="tagline">Nossa Escola, Nossa Voz!</div>
+      <h1>Game do Saber</h1>
+      <p>Transformando nossa escola, construindo nosso futuro.</p>
+    </header>
+
+    <main class="conteudo-principal">
       
-      <div class="caixa-antes">
-        <h3>❌ COMO ERA (ANTES)</h3>
-        <ul class="lista-impacto">
-          <li>Falta de estrutura no laboratório</li>
-          <li>Equipamentos quebrados</li>
-          <li>Desmotivação total nos estudos</li>
-        </ul>
+      <div class="coluna-imagem">
+        <img src="reformas 2.jpg" alt="Tirinha Antes e Depois">
       </div>
 
-      <div class="caixa-depois">
-        <h3>✅ COMO FICOU (DEPOIS)</h3>
-        <ul class="lista-impacto">
-          <li>Fones novos e computadores rápidos</li>
-          <li>Aulas mais práticas e focadas</li>
-          <li>Ambiente moderno e motivador</li>
-        </ul>
+      <div class="coluna-texto">
+        <div class="subtitulo-secao">SOBRE O PROJETO</div>
+        <h2>Pequenas mudanças, grande impacto</h2>
+        <p>O que devemos fazer para nossa escola melhorar? Mostramos na prática como investimentos em tecnologia e infraestrutura alteram totalmente a rotina de estudos dos alunos.</p>
+        
+        <div class="subtitulo-secao">PRINCIPAIS MELHORIAS</div>
+        <p>• Novos fones de ouvido e computadores no laboratório.<br>
+        • Espaços limpos, conservados e acolhedores.<br>
+        • Aulas mais práticas, dinâmicas e focadas no futuro.</p>
       </div>
 
-    </div>
+    </main>
 
-    <div class="frase-destaque">
-      "Agora dá vontade de estudar! A escola virou um lugar de aprendizado de verdade."
-    </div>
-    
-    <p class="autor-cartaz">— Depoimento de Lucas Silva, Aluno do 2º Ano</p>
-  </section>
+    <footer class="rodape-depoimento">
+      <blockquote>
+        "Antes era difícil focar nas aulas. Hoje, com a estrutura nova, dá vontade de estar aqui e aprender de verdade!"
+      </blockquote>
+      <div class="autor">— Lucas Silva, Aluno do 2º Ano</div>
+    </footer>
+
+  </div>
 
 </body>
 </html>
