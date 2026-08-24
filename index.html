@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #e2e8f0; /* Fundo cinza suave */
+      background-color: #e2e8f0;
       color: #1e293b;
       margin: 0;
       padding: 20px 15px 40px 15px;
@@ -15,9 +15,8 @@
       font-size: 20px;
     }
 
-    /* DESTAQUE ESPECIAL PARA O GAME DO SABER (AGORA EM PRETO) */
     .topo-banner {
-      background: linear-gradient(135deg, #000000, #222222); /* Fundo preto moderno */
+      background: linear-gradient(135deg, #000000, #222222);
       color: #ffffff;
       padding: 25px 15px;
       border-radius: 15px;
@@ -31,7 +30,7 @@
       margin: 0;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: #ffd700; /* Dourado em destaque */
+      color: #ffd700;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     }
 
@@ -43,7 +42,6 @@
       letter-spacing: 1px;
     }
 
-    /* TEXTOS DE APRESENTAÇÃO */
     .apresentacao {
       max-width: 800px;
       margin: 0 auto;
@@ -70,7 +68,50 @@
       margin: 30px 0;
     }
 
-    /* CARTAZ DO ANTES E DEPOIS */
+    figcaption {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 8px;
+      color: #334155;
+    }
+
+    .destaques {
+      background-color: #ffffff;
+      border-radius: 15px;
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .destaques-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .card-emoji {
+      background-color: #f8fafc;
+      border: 2px solid #cbd5e1;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .card-emoji .icon {
+      font-size: 36px;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .card-emoji span {
+      font-size: 18px;
+      font-weight: bold;
+      color: #0f172a;
+    }
+
     .cartaz {
       background-color: #ffffff;
       border: 3px solid #1e293b;
@@ -155,10 +196,101 @@
     <p>Veja como pequenas mudanças fazem uma grande diferença na nossa educação.</p>
   </main>
 
+  <!-- IMAGENS DA ESCOLA -->
   <figure>
     <img src="reformas 2.jpg" alt="Tirinha do Projeto">
+    <figcaption>Tirinha do Projeto</figcaption>
   </figure>
 
+  <figure>
+    <img src="ventilador.jpg" alt="Ventiladores da Sala">
+    <figcaption>Ventiladores</figcaption>
+  </figure>
+
+  <figure>
+    <img src="banheiro.jpg" alt="Reformas no Banheiro">
+    <figcaption>Banheiro</figcaption>
+  </figure>
+
+  <figure>
+    <img src="sala_computadores.jpg" alt="Sala de Computadores">
+    <figcaption>Sala de Computadores</figcaption>
+  </figure>
+
+  <figure>
+    <img src="janela.jpg" alt="Janelas das Salas">
+    <figcaption>Janelas</figcaption>
+  </figure>
+
+  <figure>
+    <img src="refeitorio.jpg" alt="Refeitório da Escola">
+    <figcaption>Refeitório</figcaption>
+  </figure>
+
+  <figure>
+    <img src="quadra.jpg" alt="Quadra de Esportes">
+    <figcaption>Quadra de Esportes</figcaption>
+  </figure>
+
+  <figure>
+    <img src="quadro.jpg" alt="Quadro da Sala de Aula">
+    <figcaption>Quadro Escolar</figcaption>
+  </figure>
+
+  <figure>
+    <img src="fones.jpg" alt="Fones de Ouvido dos Computadores">
+    <figcaption>Fones de Ouvido</figcaption>
+  </figure>
+
+  <figure>
+    <img src="biblioteca.jpg" alt="Biblioteca Escolar">
+    <figcaption>Biblioteca</figcaption>
+  </figure>
+
+  <!-- SEÇÃO DE EMOJIS (ANTES DO ANTES E DEPOIS) -->
+  <section class="destaques">
+    <h2 style="margin-top: 0; text-align: center;">🚀 Pilares da Mudança</h2>
+    <div class="destaques-grid">
+      <div class="card-emoji">
+        <span class="icon">🌀</span>
+        <span>Ventiladores</span>
+      </div>
+      <div class="card-emoji">
+        <span class="icon">🚽</span>
+        <span>Banheiro</span>
+      </div>
+      <div class="card-emoji">
+        <span class="icon">💻</span>
+        <span>Sala de Computadores</span>
+      </div>
+      <div class="card-emoji">
+        <span class="icon">🪟</span>
+        <span>Janelas</span>
+      </div>
+      <div class="card-emoji">
+        <span class="icon">🍽️</span>
+        <span>Refeitório</span>
+      </div>
+      <div class="card-emoji">
+        <span class="icon">⚽</span>
+        <span>Quadra</span>
+      </div>
+      <div class="card-emoji">
+        <span class="icon">📋</span>
+        <span>Quadro</span>
+      </div>
+      <div class="card-emoji">
+        <span class="icon">🎧</span>
+        <span>Fones</span>
+      </div>
+      <div class="card-emoji">
+        <span class="icon">📚</span>
+        <span>Biblioteca</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARTAZ DO ANTES E DEPOIS -->
   <section class="cartaz">
     <h2 style="color: #1e293b; margin-top: 0;">📢 A VOZ DOS ALUNOS</h2>
     
@@ -186,7 +318,7 @@
       "Agora dá vontade de estudar! A escola virou um lugar de aprendizado de verdade."
     </div>
     
-    <p class="autor">— Lucas Silva, Aluno do 2º Ano</p>
+    <p class="autor">— Jean Lucas, Aluno do 1º Ano A</p>
   </section>
 
 </body>
